@@ -16,7 +16,7 @@ Maybe it is easily to write a shell (e.g. Bash), _but this is exactly **"try! Sw
 
 <br />
 
-<img src="./Documentation/Images/tryswiftdev.png" width=272>
+<img src="./Documentation/Images/tryswiftdev.png">
 
 <br />
 
