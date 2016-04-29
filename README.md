@@ -20,9 +20,11 @@ Maybe it is easily to write a shell (e.g. Bash), _but this is exactly **"try! Sw
 
 <br />
 
-## Installing (Coming soon)
+## Installing
 
 Please download the `tryswiftdev.pkg` in the [Releases](https://github.com/tryswift/tryswiftdev/releases) and install it.
+
+_**This is a test release. It has not gone through the testing.**_
 
 By default, get `tryswiftdev` into the `/usr/local/bin/` directory.
 
@@ -38,9 +40,9 @@ $ tryswiftdev
 
 ```
 -d [--duplicate-readme]    Duplicate an existing README.md.
-                           Do not overwrite an existing file.
+                            Do not overwrite an existing file.
 -r [--replace-readme]      Replace strings in a README.md
-                           located in the current directory.
+                            located in the current directory.
 -h [--help]                Display available options.
 ```
 
@@ -62,7 +64,7 @@ HomeDirectory
 ### Duplicating a README.md
 
 ```bash
-$ tryswiftdev -d ../Pokemon ../DragonBall
+$ tryswiftdev -d ./Pokemon ./DragonBall
 ```
 
 ```
