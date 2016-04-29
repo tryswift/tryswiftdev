@@ -20,10 +20,10 @@ enum Options: String, CustomStringConvertible {
         switch self {
         case .DuplicateReadme:
             return "Duplicate an existing README.md."
-                + "\n                               Do not overwrite an existing file."
+                + "\n                                Do not overwrite an existing file."
         case .ReplaceStringsInReadme:
             return "Replace strings in a README.md"
-                + "\n                               located in the current directory."
+                + "\n                                located in the current directory."
         case .Usage:
             return "Display available options."
         }

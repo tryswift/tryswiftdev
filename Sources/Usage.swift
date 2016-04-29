@@ -14,7 +14,7 @@ func usage() {
     print("    $ tryswiftdev [option <value> ...]")
     print("")
     print("EXAMPLE:")
-    print("    $ tryswiftdev -d ../Pokemon ../DragonBall")
+    print("    $ tryswiftdev -d ./Pokemon ./DragonBall")
     print("    $ tryswiftdev -r Pokemon DragonBall")
     print("")
     print("_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/")
