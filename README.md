@@ -20,7 +20,7 @@ Maybe it is easily to write a shell (e.g. Bash), _but this is exactly **"try! Sw
 
 <br />
 
-## Installing (Comming soon)
+## Installing (Coming soon)
 
 Please download the `tryswiftdev.pkg` in the [Releases](https://github.com/tryswift/tryswiftdev/releases) and install it.
 
