@@ -8,6 +8,7 @@ private let xcodeBuildSettings = [
     "ENABLE_BITCODE=0",
     "SWIFT_DISABLE_REQUIRED_ARCLITE=1",
     "TOOLCHAINS=org.swift.3020160425a",
+    "SWIFT_LINK_OBJC_RUNTIME=1",
     "XCODE_DEFAULT_TOOLCHAIN_OVERRIDE=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain",
 ]
 
