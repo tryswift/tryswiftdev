@@ -20,16 +20,19 @@ func executeCommand(argments args: [String]) -> [String]? {
     
     close(pipe[1])
 
-    let N = 4096
-    var buf = [Int8](repeating: 0, count: N + 1)
+    let bufferSize = 4096
+    var buffer = [Int8](repeating: 0, count: bufferSize + 1)
     
     var n: Int
     var outputStrings = [String]()
+    
+    // FIXME: Return value is not correct value when executing `$ xcodebuild -showBuildSettings`.
     repeat {
-        n = read(pipe[0], &buf, N)
-        if let output = String(validatingUTF8: buf) {
+        n = read(pipe[0], &buffer, bufferSize)
+        if let output = String(validatingUTF8: buffer) {
             outputStrings.append(output)
         }
+        buffer = [Int8](repeating: 0, count: bufferSize)
     } while n > 0
     
     close(pipe[0])

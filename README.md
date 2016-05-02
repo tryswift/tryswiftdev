@@ -43,8 +43,11 @@ $ tryswiftdev
                             Do not overwrite an existing file.
 -r [--replace-readme]      Replace strings in a README.md
                             located in the current directory.
+-f [--find]                Search for specified file. ✨
 -h [--help]                Display available options.
 ```
+
+For more information about the `-f` option, please see [Find It](./Documentation/FindIt.md).
 
 <br />
 
@@ -94,9 +97,19 @@ HomeDirectory
 
 <br />
 
+### Finding It
+
+```bash
+$ tryswiftdev -f -name sourcekitd.framework
+```
+
+For more information, please see [Find It](./Documentation/FindIt.md).
+
+<br />
+
 ## Availability
 
-Recommend Swift 3.0-dev.
+Swift 3.0-dev
 
 <br />
 

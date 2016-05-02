@@ -22,10 +22,17 @@ do {
         duplicateExistingReadme(existingReadmeDirctoryPath: value1, newReadmeDirectoryPath: value2)
     case .ReplaceStringsInReadme:
         replaceStringsInReadme(source: value1, target: value2)
+    case .FindIt:
+        guard value1 == "-name" else {
+            // TODO: For now, support `-name` only.
+            throw Error.UnsupportedOption
+        }
+        findFile(targetOption: "-name", targetName: value2)
     case .Usage:
         usage()
     }
 } catch let error as Error {
+    print("")
     print(error.description)
 } catch {
     // TODO: Error Handling

@@ -5,6 +5,7 @@
 
 enum Error: ErrorProtocol {
     case InvalidValue
+    case UnsupportedOption
 }
 
 extension Error: CustomStringConvertible {
@@ -12,6 +13,8 @@ extension Error: CustomStringConvertible {
         switch self {
         case .InvalidValue:
             return "Please input [option <value> ...]."
+        case .UnsupportedOption:
+            return "Please input `tryswift -f -name <value>`."
         }
     }
 }
