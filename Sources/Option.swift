@@ -10,7 +10,7 @@ enum Options: String, CustomStringConvertible {
             self = .DuplicateReadme
         case "-r", "--replace-readme":
             self = .ReplaceStringsInReadme
-        case "-f", "--find":
+        case "-f", "--find-it":
             self = .FindIt
         case "-h", "--help":
             self = .Usage

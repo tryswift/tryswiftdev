@@ -1,6 +1,6 @@
 import Darwin
 
-func executeCommand(argments args: [String]) -> [String]? {
+func executeCommand(argments args: [String]) -> String? {
     var pipe: [Int32] = [0, 0]
     Darwin.pipe(&pipe)
     
@@ -20,22 +20,22 @@ func executeCommand(argments args: [String]) -> [String]? {
     
     close(pipe[1])
 
-    let bufferSize = 4096
+    let bufferSize = 8192
     var buffer = [Int8](repeating: 0, count: bufferSize + 1)
     
     var n: Int
-    var outputStrings = [String]()
+    var outputString = String()
     
-    // FIXME: Return value is not correct value when executing `$ xcodebuild -showBuildSettings`.
+    // FIXME: Return value is not correct when executing `$ xcodebuild -showBuildSettings`.
     repeat {
         n = read(pipe[0], &buffer, bufferSize)
         if let output = String(validatingUTF8: buffer) {
-            outputStrings.append(output)
+            outputString.append(output)
         }
-        buffer = [Int8](repeating: 0, count: bufferSize)
+        buffer = [Int8](repeating: 0, count: bufferSize + 1)
     } while n > 0
     
     close(pipe[0])
     
-    return outputStrings
+    return outputString
 }
