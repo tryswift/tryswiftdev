@@ -43,7 +43,7 @@ $ tryswiftdev
                             Do not overwrite an existing file.
 -r [--replace-readme]      Replace strings in a README.md
                             located in the current directory.
--f [--find]                Search for specified file. ✨
+-f [--find-it]             Search for specified file. ✨
 -h [--help]                Display available options.
 ```
 
