@@ -9,8 +9,8 @@ func findFile(targetOption option: String, targetName name: String) {
     var existingFilePaths = [String]()
     maybeHere.forEach {
         print("Searching... \($0)")
-        guard let outputStrings = executeCommand(argments: ["find", $0, option, name]) else { return }
-        existingFilePaths.append(contentsOf: outputStrings)
+        guard let outputString = executeCommand(argments: ["find", $0, option, name]) else { return }
+        existingFilePaths.append(contentsOf: [outputString])
     }
     displayResult(sources: parseToArray(source: existingFilePaths.reduce("", combine: { $0 + $1 })))
 }
