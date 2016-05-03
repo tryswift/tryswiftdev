@@ -1,4 +1,4 @@
-# tryswiftdev 🛠
+# tryswiftdev 🛠 [![Build Status](https://travis-ci.org/tryswift/tryswiftdev.svg?branch=master)](https://travis-ci.org/tryswift/tryswiftdev)
 
 This is a command line tool for open-source projects. 💁
 
