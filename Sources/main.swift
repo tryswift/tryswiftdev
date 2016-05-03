@@ -1,4 +1,6 @@
 do {
+    print("")
+    
     let arguments = Process.arguments.dropFirst()
     guard let arg1 = arguments.first else {
         usage()
@@ -32,7 +34,6 @@ do {
         usage()
     }
 } catch let error as Error {
-    print("")
     print(error.description)
 } catch {
     // TODO: Error Handling

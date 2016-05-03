@@ -1,5 +1,11 @@
 import Darwin
 
+/**
+ - parameters:
+   - argments: e.g. `["ls", "-1R"]`.
+ - returns: Return nil if output is empty.
+ - note: An environment valiables are not inherited.
+ */
 func executeCommand(argments args: [String]) -> String? {
     var pipe: [Int32] = [0, 0]
     Darwin.pipe(&pipe)
@@ -26,7 +32,6 @@ func executeCommand(argments args: [String]) -> String? {
     var n: Int
     var outputString = String()
     
-    // FIXME: Return value is not correct when executing `$ xcodebuild -showBuildSettings`.
     repeat {
         n = read(pipe[0], &buffer, bufferSize)
         if let output = String(validatingUTF8: buffer) {
@@ -37,5 +42,5 @@ func executeCommand(argments args: [String]) -> String? {
     
     close(pipe[0])
     
-    return outputString
+    return outputString.isEmpty ? nil : outputString
 }
