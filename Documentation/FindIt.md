@@ -37,7 +37,10 @@ dyld: Library not loaded: @rpath/sourcekitd.framework/Versions/A/sourcekitd
 
 ### Finding it with _tryswiftdev_
 
+_**tryswiftdev**_ gets Xcode Build Settings value from a Xcode project in the current directory.
+
 ```bash
+$ cd Pokemon
 $ tryswiftdev -f -name sourcekitd.framework
 ```
 
