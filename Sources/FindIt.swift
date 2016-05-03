@@ -4,7 +4,7 @@ private let maybeHere = [
     "/Library/Frameworks",
 ]
 
-private let xcodeBuildSettings = [
+private let xcodeBuildInitialSettings = [
     "ENABLE_BITCODE=0",
     "SWIFT_DISABLE_REQUIRED_ARCLITE=1",
     "SWIFT_LINK_OBJC_RUNTIME=1",
@@ -12,12 +12,10 @@ private let xcodeBuildSettings = [
     "XCODE_DEFAULT_TOOLCHAIN_OVERRIDE=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain",
 ]
 
-private var LD_RUNPATH_SEARCH_PATHS = String()
-private var FRAMEWORK_SEARCH_PATHS = String()
-
-func getXcodeBuildSettings() {
-    guard let outputString = executeCommand(argments: ["xcodebuild", "-showBuildSettings"] + xcodeBuildSettings) else { return }
+func getXcodeBuildSettings() -> [String: String]? {
+    guard let outputString = executeCommand(argments: ["xcodebuild", "-showBuildSettings"] + xcodeBuildInitialSettings) else { return nil }
     
+    var xcodeBuildSettings = [String: String]()
     outputString.characters.split(separator: "\n").map(String.init).forEach {
         var characters = $0.characters
         loop: while true {
@@ -31,39 +29,48 @@ func getXcodeBuildSettings() {
         
         let xcodeBuildSetting = String(characters)
         if xcodeBuildSetting.hasPrefix("LD_RUNPATH_SEARCH_PATHS = ") {
-            LD_RUNPATH_SEARCH_PATHS = String(xcodeBuildSetting.characters.dropFirst(26))
+            xcodeBuildSettings["LD_RUNPATH_SEARCH_PATHS"] = String(xcodeBuildSetting.characters.dropFirst(26))
         } else if xcodeBuildSetting.hasPrefix("FRAMEWORK_SEARCH_PATHS = ") {
-            FRAMEWORK_SEARCH_PATHS = String(xcodeBuildSetting.characters.dropFirst(25))
+            xcodeBuildSettings["FRAMEWORK_SEARCH_PATHS"] = String(xcodeBuildSetting.characters.dropFirst(25))
         }
     }
+    return xcodeBuildSettings
 }
 
-func findFile(targetOption option: String, targetName name: String) {
-    getXcodeBuildSettings()
-    
+func searchFile(targetOption option: String, targetName name: String) -> [String]? {
     print("")
     var existingFilePaths = [String]()
     maybeHere.forEach {
         print("Searching... \($0)")
         guard let outputString = executeCommand(argments: ["find", $0, option, name]) else { return }
-        existingFilePaths.append(contentsOf: [outputString])
+        guard !outputString.isEmpty else { return }
+        existingFilePaths.append(contentsOf: parseToArray(source: outputString))
     }
-    displayResult(sources: parseToArray(source: existingFilePaths.reduce("", combine: { $0 + $1 })))
+    return existingFilePaths
 }
 
-func displayResult(sources: [String]) {
+func displayResult(sources: [String], runpathSearchPaths: String?, frameworkSearchPaths: String?) {
     print("")
     guard !sources.isEmpty else {
         print("Not found.")
         return
     }
+    
     print("Found it!")
     print("")
     sources.forEach { print("  - \($0)") }
     print("")
     print("Your `Runpath Search Paths`(LD_RUNPATH_SEARCH_PATHS):")
-    print("  - \(LD_RUNPATH_SEARCH_PATHS)")
+    print("  - \(runpathSearchPaths ?? "(empty)")")
     print("")
     print("Your `Framework Search Paths`(FRAMEWORK_SEARCH_PATHS):")
-    print("  - \(FRAMEWORK_SEARCH_PATHS)")
+    print("  - \(frameworkSearchPaths ?? "(empty)")")
+}
+
+func findFile(targetOption option: String, targetName name: String) {
+    guard let xcodeBuildSettings = getXcodeBuildSettings() else { return }
+    guard let existingFilePaths = searchFile(targetOption: option, targetName: name) else { return }
+    displayResult(sources: parseToArray(source: existingFilePaths.reduce("", combine: { $0 + $1 })),
+                  runpathSearchPaths: xcodeBuildSettings["LD_RUNPATH_SEARCH_PATHS"],
+                  frameworkSearchPaths: xcodeBuildSettings["FRAMEWORK_SEARCH_PATHS"])
 }
