@@ -1,4 +1,4 @@
-# Find It 🔍 for Beginners
+# Find It 🔍
 
 ### A Work In Progress 👷
 
@@ -72,7 +72,7 @@ Your `Framework Search Paths`(FRAMEWORK_SEARCH_PATHS):
 
 ## Requirement
 
-swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
+Recommend swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.
 
 <br />
 

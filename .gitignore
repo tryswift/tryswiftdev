@@ -42,6 +42,7 @@ playground.xcworkspace
 
 Makefile
 *.pkg
+/tmp
 
 # CocoaPods
 #
