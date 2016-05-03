@@ -2,6 +2,7 @@ language: objective-c
 osx_image: xcode7.3
 script:
   - swift build
+  - swift build -X
   - swift test
 before_install:
   - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a
