@@ -1,12 +1,19 @@
 # Find It 🔍
 
-### A Work In Progress 👷
+### _Help You Out of "image not found"_
 
-For now, support `$ tryswiftdev -f -name <value>` only. 🙏
+- _**"Find It" searches for a specified file in some directories.**_
+- _**It makes easy for you to compare your Xcode Build Settings and find a mistake.**_
 
 <br />
 
-<img src="./Images/FindIt.png">
+<img src="./Images/FindIt.gif">
+
+<br />
+
+### A Work In Progress 👷
+
+For now, support `$ tryswiftdev -f -name <value>` only. 🙏
 
 <br />
 
@@ -53,20 +60,20 @@ Found it!
 
   - /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/sourcekitd.framework
   - /Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib/sourcekitd.framework
-  - /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain/usr/lib/sourcekitd.framework
+  - /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain/usr/lib/sourcekitd.framework
 
 Your `Runpath Search Paths`(LD_RUNPATH_SEARCH_PATHS):
-  - /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain/usr/lib/swift/macosx
+  - /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain/usr/lib/swift/macosx
 
 Your `Framework Search Paths`(FRAMEWORK_SEARCH_PATHS):
-  - 
+  - (empty)
 ```
 
 ### One of the following paths could be correct path. 😇
 
 - `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib`
 - `/Library/Developer/Toolchains/swift-2.2-SNAPSHOT-2016-03-01-a.xctoolchain/usr/lib`
-- `/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-04-25-a.xctoolchain/usr/lib`
+- `/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain/usr/lib`
 
 <br />
 
@@ -82,3 +89,9 @@ Recommend swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.
 - [ ] Tests
 
 etc.
+
+<br />
+
+## License
+
+Licensed under the [MIT License](LICENSE).
