@@ -7,7 +7,7 @@
 
 <br />
 
-<img src="./Documentation/Images/ReadmeGenerator.gif">
+<img src="./Images/ReadmeGenerator.gif">
 
 <br />
 
