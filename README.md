@@ -1,8 +1,20 @@
 # tryswiftdev 🛠 [![Build Status](https://travis-ci.org/tryswift/tryswiftdev.svg?branch=master)](https://travis-ci.org/tryswift/tryswiftdev)
 
-This is a command line tool for open-source projects. 💁
+**This is a command line tool for open-source projects.** 💁
 
-Currently, support **OS X only**. 🙏
+<br />
+
+### [_README Generator_](./Documentation/ReadmeGenerator.md)
+
+#### _- Make Easy for You to Create a README.md of New Project_
+
+### [_Find It_](./Documentation/FindIt.md)
+
+#### _- Help You Out of "image not found"_
+
+<br />
+
+<img src="./Documentation/Images/tryswiftdev.png">
 
 <br />
 
@@ -14,9 +26,28 @@ It is built with the _**Swift Package Manager**_.
 
 Maybe it is easily to write a shell (e.g. Bash), _but this is exactly **"try! Swift"**._
 
+Currently, support **OS X only**. 🙏
+
 <br />
 
-<img src="./Documentation/Images/tryswiftdev.png">
+## Options
+
+```
+-d [--duplicate-readme]    Duplicate an existing README.md.
+                            Do not overwrite an existing file.
+-r [--replace-readme]      Replace strings in a README.md
+                            located in the current directory.
+-f [--find-it]             Search for specified file. ✨
+-h [--help]                Display available options.
+```
+
+### _README Generator_
+
+Please see [_**README Generator**_](./Documentation/ReadmeGenerator.md).
+
+### _Find It_
+
+Please see [_**Find It**_](./Documentation/FindIt.md).
 
 <br />
 
@@ -33,77 +64,6 @@ You can verify your installation by typing `tryswiftdev` in a Terminal.app.
 ```
 $ tryswiftdev
 ```
-
-<br />
-
-## Options
-
-```
--d [--duplicate-readme]    Duplicate an existing README.md.
-                            Do not overwrite an existing file.
--r [--replace-readme]      Replace strings in a README.md
-                            located in the current directory.
--f [--find-it]             Search for specified file. ✨
--h [--help]                Display available options.
-```
-
-For more information about the `-f` option, please see [Find It](./Documentation/FindIt.md).
-
-<br />
-
-## Example
-
-Please prepare a target directory beforehand. (e.g. `DragonBall`)
-
-```
-HomeDirectory
-├── Pokemon
-│   └── README.md (Pokemon)
-└── DragonBall
-```
-
-<br />
-
-### Duplicating a README.md
-
-```bash
-$ tryswiftdev -d ./Pokemon ./DragonBall
-```
-
-```
-HomeDirectory
-├── Pokemon
-│   └── README.md (Pokemon)
-└── DragonBall
-    └── README.md (Pokemon) ✨
-```
-
-<br />
-
-### Replacing Strings in a README.md
-
-```bash
-$ cd DragonBall
-$ tryswiftdev -r Pokemon DragonBall
-```
-
-```
-HomeDirectory
-├── Pokemon
-│   └── README.md (Pokemon)
-└── DragonBall
-    └── README.md (DragonBall) ✨
-```
-
-<br />
-
-### Finding It
-
-```bash
-$ tryswiftdev -f -name sourcekitd.framework
-```
-
-For more information, please see [Find It](./Documentation/FindIt.md).
 
 <br />
 
