@@ -1,5 +1,7 @@
 # README Generator 📄
 
+_Is most of your documentation the same as your existing project's?_
+
 ### _Make Easy for You to Create a README.md of New Project_
 
 - _**Duplicate an existing README.md**_

@@ -25,15 +25,15 @@ Please set the following format to a configuration file. (e.g. `tryswiftdev.uvs`
 ### A Specific Example (testTryswiftdev.uvs)
 
 ```
-./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020171225a\"
-./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a
+./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020160503a\"
+./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/testFindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a
+./tryswiftdevtest/AfterTheUpdate/testFindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/testFindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a
+./tryswiftdevtest/AfterTheUpdate/testFindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode8.0
-./tryswiftdevtest/AfterTheUpdate/.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a
+./tryswiftdevtest/AfterTheUpdate/.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode7.3
+./tryswiftdevtest/AfterTheUpdate/.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
 
 <br />
@@ -48,14 +48,10 @@ $ tryswiftdev -u ? ?
 
 ### Result 😇
 
-```
-$ git diff
-```
-
 ```diff
 5,6c5,6
 <     "TOOLCHAINS=org.swift.3020160425a",
-<     "XCODE_DEFAULT_TOOLCHAIN_OVERRIDE=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a.xctoolchain",
+<     "XCODE_DEFAULT_TOOLCHAIN_OVERRIDE=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain",
 ---
 >     "TOOLCHAINS=org.swift.3020160503a",
 >     "XCODE_DEFAULT_TOOLCHAIN_OVERRIDE=/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain",
@@ -103,7 +99,7 @@ $ git diff
 ### Support CocoaPods
 
 ```
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"3.1.2\"
+./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
 ./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.osx.deployment_target\ =\ \"[0-9]\{2\}.[0-9]\", s.osx.deployment_target\ =\ \"10.9\"
 ./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.ios.deployment_target\ =\ \"[0-9].[0-9]\", s.ios.deployment_target =\ \"8.0\"
 ./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.tvos.deployment_target\ =\ \"[0-9].[0-9]", s.tvos.deployment_target =\ \"9.0\"

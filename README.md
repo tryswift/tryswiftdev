@@ -6,6 +6,8 @@
 
 ### [_README Generator_](./Documentation/ReadmeGenerator.md)
 
+_Is most of your documentation the same as your existing project's?_
+
 #### _- Make Easy for You to Create a README.md of New Project_
 
 ### [_Find It_](./Documentation/FindIt.md)
