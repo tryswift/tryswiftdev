@@ -5,5 +5,5 @@ let package = Package(
     targets: [
         Target(name: "tryswiftdev")
     ],
-    exclude: ["Documentation"]
+    exclude: ["Documentation", "testTryswiftdev"]
 )

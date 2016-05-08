@@ -40,6 +40,9 @@ func executeCommand(argments args: [String]) -> String? {
         buffer = [Int8](repeating: 0, count: bufferSize + 1)
     } while n > 0
     
+    // TODO: wait
+    // TODO: error
+    
     close(pipe[0])
     
     return outputString.isEmpty ? nil : outputString
