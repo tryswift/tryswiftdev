@@ -66,8 +66,8 @@ final class FileTests: XCTestCase {
         XCTAssertEqual(versionStringsInfos.dropFirst(5).first?.newString, "swift-DEVELOPMENT-SNAPSHOT-2017-12-25-a")
         
         XCTAssertEqual(versionStringsInfos.dropFirst(6).first?.filePath, "./\(testDirectoryName)/\(afterTheUpdateDirectoryName)/testTryswiftdev.podspec")
-        XCTAssertEqual(versionStringsInfos.dropFirst(6).first?.regularExpression, "s.version\\ \\ \\ \\ \\ =\\ \\\"[0-9].[0-9].[0-9]\"")
-        XCTAssertEqual(versionStringsInfos.dropFirst(6).first?.newString, "s.version\\ \\ \\ \\ \\ =\\ \\\"3.1.2\\\"")
+        XCTAssertEqual(versionStringsInfos.dropFirst(6).first?.regularExpression, "s.version\\ \\ \\ \\ \\ \\ =\\ \\\"[0-9].[0-9].[0-9]\\\"")
+        XCTAssertEqual(versionStringsInfos.dropFirst(6).first?.newString, "s.version\\ \\ \\ \\ \\ \\ =\\ \\\"3.1.2\\\"")
         
         XCTAssertEqual(versionStringsInfos.dropFirst(7).first?.filePath, "./\(testDirectoryName)/\(afterTheUpdateDirectoryName)/testTryswiftdev.podspec")
         XCTAssertEqual(versionStringsInfos.dropFirst(7).first?.regularExpression, "s.osx.deployment_target\\ =\\ \\\"[0-9]\\{2\\}.[0-9]\\\"")
