@@ -8,7 +8,10 @@ private let readmeFileName = "README.md"
    - newReadmeDirectoryPath: Dirctory path of new Readme.md.
  */
 func duplicateExistingReadme(existingReadmeDirctoryPath sourcePath: String, newReadmeDirectoryPath targetPath: String) {
-    executeCommand(argments: ["cp", "-nv", "\(sourcePath)/\(readmeFileName)", targetPath])
+    guard let output = executeCommand(argments: ["cp", "-nv", "\(sourcePath)/\(readmeFileName)", targetPath]) else {
+        return
+    }
+    print(output)
 }
 
 /**
@@ -18,5 +21,8 @@ func duplicateExistingReadme(existingReadmeDirctoryPath sourcePath: String, newR
    - target: Target string.
  */
 func replaceStringsInReadme(source: String, target: String) {
-    executeCommand(argments:["sed", "-i", "", "-e", "s/\(source)/\(target)/g", "./\(readmeFileName)"])
+    print("./\(readmeFileName):")
+    print("    `\(source)` -> \(target)")
+    guard let output = executeCommand(argments:["sed", "-i", "", "-e", "s/\(source)/\(target)/g", "./\(readmeFileName)"]) else { return }
+    print(output)
 }
