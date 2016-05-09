@@ -4,6 +4,10 @@
 
 <br />
 
+<img src="./Images/VersionStringsUpdater.gif">
+
+<br />
+
 ### A Work In Progress 👷
 
 ⚠️ **Please note!**
