@@ -14,6 +14,10 @@ _Is most of your documentation the same as your existing project's?_
 
 #### _- Help You Out of "image not found"_
 
+### [_Version Strings Updater_](./Documentation/VersionStringsUpdater.md)
+
+#### _- Make Easy for You to Update Version Strings in Specified Files"_
+
 <br />
 
 <img src="./Documentation/Images/tryswiftdev.png">
@@ -39,7 +43,8 @@ Currently, support **OS X only**. 🙏
                             Do not overwrite an existing file.
 -r [--replace-readme]      Replace strings in a README.md
                             located in the current directory.
--f [--find-it]             Search for specified file. ✨
+-f [--find-it]             Search for specified file.
+-u [--update-version]      Update version strings in specified files. ✨
 -h [--help]                Display available options.
 ```
 
@@ -50,6 +55,10 @@ Please see [_**README Generator**_](./Documentation/ReadmeGenerator.md).
 ### _Find It_
 
 Please see [_**Find It**_](./Documentation/FindIt.md).
+
+### _Version Strings Updater_
+
+Please see [_**Find It**_](./Documentation/VersionStringsUpdater.md).
 
 <br />
 
