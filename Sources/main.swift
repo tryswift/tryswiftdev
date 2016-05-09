@@ -31,7 +31,7 @@ do {
         }
         findFile(targetOption: "-name", targetName: value2)
     case .UpdateVersionStrings:
-        updateVersionStrings(fullPath: "/Users/sathachie/tryswiftdev/tryswiftdevtest/testTryswiftdev.uvs")
+        try updateVersionStrings(configurationFileFullPath: value1, rootDirectoryPath: value2)
     case .Usage:
         usage()
     }
@@ -39,6 +39,7 @@ do {
     print(error.description)
 } catch {
     // TODO: Error Handling
+    print("Error!!")
 }
 
 print("")

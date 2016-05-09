@@ -118,14 +118,13 @@ extension ReadmeTests {
 
 extension VersionTests {
     override func tearDown() {
-        updateVersionStrings(fullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameOneLineForReset)")
-        updateVersionStrings(fullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameForReset)")
-        
+        try! updateVersionStrings(configurationFileFullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameOneLineForReset)", rootDirectoryPath: "\(cd)")
+        try! updateVersionStrings(configurationFileFullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameForReset)", rootDirectoryPath: "\(cd)")
         super.tearDown()
     }
     
     func testUpdateVersionStringsOneLine() {
-        updateVersionStrings(fullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameOneLine)")
+        try! updateVersionStrings(configurationFileFullPath: "\(cd)/\(testDirectoryName)/\(configurationFileNameOneLine)", rootDirectoryPath: "\(cd)")
         
         let targetFiles = [
                               "testFindItOneLine.swift",
@@ -140,7 +139,7 @@ extension VersionTests {
     }
     
     func testUpdateVersionStrings() {
-        updateVersionStrings(fullPath: "\(cd)/\(testDirectoryName)/\(configurationFileName)")
+        try! updateVersionStrings(configurationFileFullPath: "\(cd)/\(testDirectoryName)/\(configurationFileName)", rootDirectoryPath: "\(cd)")
         
         let targetFiles = [
                               "testFindIt.swift",

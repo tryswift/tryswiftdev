@@ -13,7 +13,7 @@ enum Options: String, CustomStringConvertible {
             self = .ReplaceStringsInReadme
         case "-f", "--find-it":
             self = .FindIt
-        case "-u":
+        case "-u", "--update-version-strings":
             self = .UpdateVersionStrings
         case "-h", "--help":
             self = .Usage
