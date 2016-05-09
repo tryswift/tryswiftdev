@@ -1,4 +1,5 @@
 @testable import tryswiftdev
+import FounDarwin
 import XCTest
 
 private var cd = String()
@@ -14,7 +15,7 @@ final class FileTests: XCTestCase {
     override func setUp() {
         super.setUp()
         do {
-            cd = try currentDirectoryPath()
+            cd = try FounDarwin.currentDirectoryPath()
         } catch {
             XCTFail()
             return
@@ -104,7 +105,7 @@ final class FileTests: XCTestCase {
 }
 
 func compareFile(path afterFilePath: String, to beforeFilePath: String) {
-    guard let diff = executeCommand(argments: ["diff", afterFilePath, beforeFilePath]) else {
+    guard let diff = FounDarwin.executeCommand(argments: ["diff", afterFilePath, beforeFilePath]) else {
         XCTFail()
         return
     }
