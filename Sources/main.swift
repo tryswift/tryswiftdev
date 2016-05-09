@@ -30,6 +30,8 @@ do {
             throw Error.UnsupportedOption
         }
         findFile(targetOption: "-name", targetName: value2)
+    case .UpdateVersionStrings:
+        updateVersionStrings(fullPath: "/Users/sathachie/tryswiftdev/tryswiftdevtest/testTryswiftdev.uvs")
     case .Usage:
         usage()
     }
