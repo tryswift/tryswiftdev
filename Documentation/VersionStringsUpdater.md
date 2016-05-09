@@ -29,15 +29,15 @@ Please set the following format to a configuration file. (e.g. `tryswiftdev.uvs`
 ### A Specific Example (testTryswiftdev.uvs)
 
 ```
-./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020160503a\"
-./tryswiftdevtest/AfterTheUpdate/testFindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./tryswiftdevtest/AfterUpdate/testFindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020160503a\"
+./tryswiftdevtest/AfterUpdate/testFindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/testFindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./tryswiftdevtest/AfterUpdate/testFindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/testFindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./tryswiftdevtest/AfterUpdate/testFindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterTheUpdate/.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode7.3
-./tryswiftdevtest/AfterTheUpdate/.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./tryswiftdevtest/AfterUpdate/.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode7.3
+./tryswiftdevtest/AfterUpdate/.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
 
 <br />
@@ -103,25 +103,25 @@ $ tryswiftdev -u ? ?
 ### Support CocoaPods
 
 ```
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.osx.deployment_target\ =\ \"[0-9]\{2\}.[0-9]\", s.osx.deployment_target\ =\ \"10.9\"
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.ios.deployment_target\ =\ \"[0-9].[0-9]\", s.ios.deployment_target =\ \"8.0\"
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.tvos.deployment_target\ =\ \"[0-9].[0-9]", s.tvos.deployment_target =\ \"9.0\"
-./tryswiftdevtest/AfterTheUpdate/testTryswiftdev.podspec, s.watchos.deployment_target\ =\ \"[0-9].[0-9]\", s.watchos.deployment_target\ =\ \"2.0\"
+./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
+./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.osx.deployment_target\ =\ \"[0-9]\{2\}.[0-9]\", s.osx.deployment_target\ =\ \"10.9\"
+./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.ios.deployment_target\ =\ \"[0-9].[0-9]\", s.ios.deployment_target =\ \"8.0\"
+./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.tvos.deployment_target\ =\ \"[0-9].[0-9]", s.tvos.deployment_target =\ \"9.0\"
+./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.watchos.deployment_target\ =\ \"[0-9].[0-9]\", s.watchos.deployment_target\ =\ \"2.0\"
 ```
 
 ### Support Carthage
 
 ```
-./tryswiftdevtest/AfterTheUpdate/Cartfile,  github\ \"ishkawa\/APIKit\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ishkawa\/APIKit\"\ \"2.0.0\"
-./tryswiftdevtest/AfterTheUpdate/Cartfile,  github\ \"ikesyo\/Himotoki\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ikesyo\/Himotoki\"\ \"2.0.0\"
-./tryswiftdevtest/AfterTheUpdate/Cartfile.private, github\ \"jspahrsummers\/xcconfigs\"\ \"[a-z0-9]\{7\}\", github\ \"jspahrsummers\/xcconfigs\"\ \"8ed0ba2\"
+./tryswiftdevtest/AfterUpdate/Cartfile,  github\ \"ishkawa\/APIKit\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ishkawa\/APIKit\"\ \"2.0.0\"
+./tryswiftdevtest/AfterUpdate/Cartfile,  github\ \"ikesyo\/Himotoki\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ikesyo\/Himotoki\"\ \"2.0.0\"
+./tryswiftdevtest/AfterUpdate/Cartfile.private, github\ \"jspahrsummers\/xcconfigs\"\ \"[a-z0-9]\{7\}\", github\ \"jspahrsummers\/xcconfigs\"\ \"8ed0ba2\"
 ```
 
 ### Support swiftenv
 
 ```
-./tryswiftdevtest/AfterTheUpdate/.swift-version, DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./tryswiftdevtest/AfterUpdate/.swift-version, DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
 
 ### Result
