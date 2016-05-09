@@ -23,5 +23,8 @@ func updateVersionStrings(fullPath: String) {
         !$0.filePath.isEmpty || !$0.regularExpression.isEmpty || !$0.newString.isEmpty
         }.forEach {
             replaceStrings(in: $0.filePath, regularExpression: $0.regularExpression, newString: $0.newString)
+            print("\($0.filePath)")
+            print("\($0.regularExpression) -> \($0.newString)")
+            print("")
     }
 }
