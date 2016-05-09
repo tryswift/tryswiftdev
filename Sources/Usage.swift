@@ -9,7 +9,7 @@ func usage() {
     print("    -d [--duplicate-readme]    \(Options.DuplicateReadme.description)")
     print("    -r [--replace-readme]      \(Options.ReplaceStringsInReadme.description)")
     print("    -f [--find-it]             \(Options.FindIt.description)")
-    print("    -f [--update-version]      \(Options.UpdateVersionStrings.description)")
+    print("    -u [--update-version]      \(Options.UpdateVersionStrings.description)")
     print("    -h [--help]                \(Options.Usage.description)")
     print("")
     print("USAGE:")
