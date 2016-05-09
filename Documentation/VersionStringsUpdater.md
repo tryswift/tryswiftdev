@@ -1,4 +1,4 @@
-# Version Strings Updater ✨ (Coming soon)
+# Version Strings Updater ✨
 
 ### _**Make Easy for You to Update Version Strings in Specified Files**_
 
@@ -20,11 +20,19 @@ This is still in early design and development. 🙏
 
 ### Preparing for Update Version Strings
 
-Please set the following format to a configuration file. (e.g. `tryswiftdev.uvs`)
+Please set the following format to your configuration file.
+
+You can decide the name as you like. (e.g. `tryswiftdevuvs`, `tryswiftdev.uvs`)
 
 ```
 <YourFilePath>, <RegularExpression>, <NewString>
 ```
+
+- `<YourFilePath>`
+
+  You can specify the relative path of files you want to update.
+  
+  And, please specify the root/current directory when executing `tryswiftdev -u` command.
 
 ### A Specific Example (testTryswiftdev.uvs)
 
@@ -45,12 +53,20 @@ Please set the following format to a configuration file. (e.g. `tryswiftdev.uvs`
 ### Executing Update via _tryswiftdev_
 
 ```
-$ tryswiftdev -u ? ?
+$ tryswiftdev -u <ConfigurationFileAbsolutePath> <RootDirectoryPath>
 ```
+
+- `<ConfigurationFileAbsolutePath>`  
+  
+  Please specify the absolute path of your configuration file.
+
+- `<RootDirectoryPath>`
+
+  Please specify the root/current directory when executing `tryswiftdev -u` command.
 
 <br />
 
-### Result 😇
+### Result
 
 ```diff
 5,6c5,6
@@ -100,7 +116,7 @@ $ tryswiftdev -u ? ?
 
 ## Others
 
-### Support CocoaPods
+### CocoaPods Example
 
 ```
 ./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
@@ -110,7 +126,7 @@ $ tryswiftdev -u ? ?
 ./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.watchos.deployment_target\ =\ \"[0-9].[0-9]\", s.watchos.deployment_target\ =\ \"2.0\"
 ```
 
-### Support Carthage
+### Carthage Example
 
 ```
 ./tryswiftdevtest/AfterUpdate/Cartfile,  github\ \"ishkawa\/APIKit\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ishkawa\/APIKit\"\ \"2.0.0\"
@@ -118,11 +134,13 @@ $ tryswiftdev -u ? ?
 ./tryswiftdevtest/AfterUpdate/Cartfile.private, github\ \"jspahrsummers\/xcconfigs\"\ \"[a-z0-9]\{7\}\", github\ \"jspahrsummers\/xcconfigs\"\ \"8ed0ba2\"
 ```
 
-### Support swiftenv
+### swiftenv Example
 
 ```
 ./tryswiftdevtest/AfterUpdate/.swift-version, DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
+
+<br />
 
 ### Result
 

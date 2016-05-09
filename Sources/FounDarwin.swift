@@ -9,3 +9,7 @@ import FounDarwin
 func executeCommand(argments args: [String]) -> String? {
     return FounDarwin.executeCommand(argments: args)
 }
+
+func changeDirectory(path: String) throws {
+    try FounDarwin.changeDirectory(path: path)
+}

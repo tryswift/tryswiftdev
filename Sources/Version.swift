@@ -6,6 +6,8 @@ struct VersionStringsInfo {
 
 func readVersionStringsInfo(fullPath: String) -> [VersionStringsInfo]? {
     guard let updateVersionStrings = openVersionStringsInfoFile(path: fullPath) else {
+        // TODO: Error Handling
+        print("Error: Invalid Path.")
         return nil
     }
     return updateVersionStrings
@@ -17,8 +19,11 @@ func replaceStrings(in filePath: String, regularExpression: String, newString: S
     // TODO: Maybe nothing is displayed.
 }
 
-func updateVersionStrings(fullPath: String) {
+func updateVersionStrings(configurationFileFullPath fullPath: String, rootDirectoryPath: String) throws {
     guard let versionStringsInfos = readVersionStringsInfo(fullPath: fullPath) else { return }
+    
+    try changeDirectory(path: rootDirectoryPath)
+    
     versionStringsInfos.filter {
         !$0.filePath.isEmpty || !$0.regularExpression.isEmpty || !$0.newString.isEmpty
         }.forEach {
