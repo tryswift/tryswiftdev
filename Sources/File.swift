@@ -1,58 +1,15 @@
 import Darwin
 
-/*
-func readFileToLines(path targetPath: String) -> [String]? {
-    guard !targetPath.isEmpty else { return nil }
-    guard let targetFile = fopen(targetPath, "r") else { return nil }
-    
-    let newLine = Int32(UInt8(ascii: UnicodeScalar("\n")))
-    var combineString = String()
-    var lines = [String]()
-    
-    while true {
-        let c = fgetc(targetFile)
-        switch c {
-        case EOF:
-            // TODO: close?
-            if !combineString.isEmpty {
-                lines.append(combineString)
-            }
-            return lines
-        case newLine:
-            lines.append(combineString)
-            combineString = String()
-        default:
-            combineString.append(UnicodeScalar(UInt8(c)))
-        }
-    }
-}
- */
-
 func openVersionStringsInfoFile(path targetPath: String) -> [VersionStringsInfo]? {
     guard let targetFile = fopen(targetPath, "r") else { return nil }
     
     let separator = Int32(UInt8(ascii: UnicodeScalar(",")))
-    let newLine = Int32(UInt8(ascii: UnicodeScalar("\n")))    // 10
+    let newLine = Int32(UInt8(ascii: UnicodeScalar("\n")))
     let space = Int32(UInt8(ascii: UnicodeScalar(" ")))
     
     var combineString = String()
     var versionStringsInfo = VersionStringsInfo()
     var targetVersionStrings = [VersionStringsInfo]()
-    
-//    let bufferSize = 4096
-//    var buffer = [Int8](repeating: 0, count: bufferSize + 1)
-    
-//    while true {
-//        let c = fgetc(targetFile)
-//        guard c != EOF else { return targetVersionStrings }
-//        let s = fgets(&buffer, 4096, targetFile)
-//        guard let output = String(validatingUTF8: s) else { return nil }
-//        guard !output.isEmpty else { return nil }
-//        print(output)
-//        output.characters.split(separator: ",").forEach {
-//            print(String($0))
-//        }
-//    }
     
     while true {
         let c = fgetc(targetFile)

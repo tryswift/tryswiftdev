@@ -6,8 +6,6 @@
 enum Error: ErrorProtocol {
     case InvalidValue
     case UnsupportedOption
-    case CannotGetCwd
-    case CannotChangeDirectory
 }
 
 extension Error: CustomStringConvertible {
@@ -17,10 +15,6 @@ extension Error: CustomStringConvertible {
             return "Please input [option <value> ...]."
         case .UnsupportedOption:
             return "Please input `tryswift -f -name <value>`."
-        case .CannotGetCwd:
-            return "Cannot get the current directory path."
-        case .CannotChangeDirectory:
-            return "Cannot change directory."
         }
     }
 }
