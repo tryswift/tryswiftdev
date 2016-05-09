@@ -32,7 +32,7 @@ You can decide the name as you like. (e.g. `tryswiftdevuvs`, `tryswiftdev.uvs`)
 
   You can specify the relative path of files you want to update.
   
-  And, please specify the root/current directory when executing `tryswiftdev -u` command.
+  And, please specify the (current) working directory when executing `tryswiftdev -u` command.
 
 ### A Specific Example (testTryswiftdev.uvs)
 
@@ -53,16 +53,16 @@ You can decide the name as you like. (e.g. `tryswiftdevuvs`, `tryswiftdev.uvs`)
 ### Executing Update via _tryswiftdev_
 
 ```
-$ tryswiftdev -u <ConfigurationFileAbsolutePath> <RootDirectoryPath>
+$ tryswiftdev -u <ConfigurationFileAbsolutePath> <WorkingDirectoryPath>
 ```
 
 - `<ConfigurationFileAbsolutePath>`  
   
   Please specify the absolute path of your configuration file.
 
-- `<RootDirectoryPath>`
+- `<WorkingDirectoryPath>`
 
-  Please specify the root/current directory when executing `tryswiftdev -u` command.
+  Please specify the (current) working directory when executing `tryswiftdev -u` command.
 
 <br />
 
