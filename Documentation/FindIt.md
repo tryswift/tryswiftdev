@@ -79,7 +79,7 @@ Your `Framework Search Paths`(FRAMEWORK_SEARCH_PATHS):
 
 ## Requirement
 
-Recommend swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.
+Recommend swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.
 
 <br />
 
