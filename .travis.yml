@@ -5,7 +5,7 @@ script:
   - swift build -X
   - swift test
 before_install:
-  - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+  - export SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a
   - curl -O https://swift.org/builds/development/xcode/${SWIFT_VERSION}/${SWIFT_VERSION}-osx.pkg
   - sudo installer -pkg ${SWIFT_VERSION}-osx.pkg -target /
   - export TOOLCHAINS=swift
