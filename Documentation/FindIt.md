@@ -83,15 +83,6 @@ Recommend swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.
 
 <br />
 
-## ToDo
-
-- [ ] Error Handling
-- [ ] Tests
-
-etc.
-
-<br />
-
 ## License
 
 Licensed under the [MIT License](LICENSE).

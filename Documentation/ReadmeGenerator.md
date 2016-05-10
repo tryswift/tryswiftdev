@@ -104,15 +104,6 @@ Recommented Swift 3.0-dev.
 
 <br />
 
-## ToDo
-
-- [ ] Error Handling
-- [ ] Tests
-
-etc.
-
-<br />
-
 ## License
 
 Licensed under the [MIT License](LICENSE).
