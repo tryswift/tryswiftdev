@@ -8,7 +8,7 @@ final class FindItTests: XCTestCase {
             return
         }
         // FIXME: Hard-coding
-        XCTAssertEqual(xcodebuildSettings["LD_RUNPATH_SEARCH_PATHS"], "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a.xctoolchain/usr/lib/swift/macosx")
+        XCTAssertEqual(xcodebuildSettings["LD_RUNPATH_SEARCH_PATHS"], "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/lib/swift/macosx")
         XCTAssertNil(xcodebuildSettings["FRAMEWORK_SEARCH_PATHS"])
     }
     

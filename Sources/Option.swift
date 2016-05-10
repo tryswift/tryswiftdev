@@ -3,6 +3,7 @@ enum Options: String, CustomStringConvertible {
     case ReplaceStringsInReadme
     case FindIt
     case UpdateVersionStrings
+    case InstallDevelopmentSnapshot
     case Usage
     
     init?(argment: String) {
@@ -15,6 +16,8 @@ enum Options: String, CustomStringConvertible {
             self = .FindIt
         case "-u", "--update-version":
             self = .UpdateVersionStrings
+        case "-i", "--install-snapshot":
+            self = .InstallDevelopmentSnapshot
         case "-h", "--help":
             self = .Usage
         default:
@@ -26,14 +29,17 @@ enum Options: String, CustomStringConvertible {
         switch self {
         case .DuplicateReadme:
             return "Duplicate an existing README.md."
-                + "\n                                Do not overwrite an existing file."
+                + "\n                                 Do not overwrite an existing file."
         case .ReplaceStringsInReadme:
             return "Replace strings in a README.md"
-                + "\n                                located in the current directory."
+                + "\n                                 located in the current directory."
         case .FindIt:
             return "Search for specified file."
         case .UpdateVersionStrings:
             return "Update version strings in specified files."
+        case .InstallDevelopmentSnapshot:
+            return "Download and install Development Snapshots"
+                + "\n                                 from Swift.org."
         case .Usage:
             return "Display available options."
         }
