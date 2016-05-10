@@ -13,3 +13,15 @@ func executeCommand(argments args: [String]) -> String? {
 func changeDirectory(path: String) throws {
     try FounDarwin.changeDirectory(path: path)
 }
+
+func downloadSnapshot(snapshotVersion version: String) {
+    FounDarwin.downloadPackage(snapshotVersion: version)
+}
+
+func installSnapshot(snapshotVersion version: String) {
+    FounDarwin.installPackage(snapshotVersion: version)
+}
+
+func removeSnapshot(snapshotVersion version: String) {
+    FounDarwin.removePkgFile(snapshotVersion: version)
+}

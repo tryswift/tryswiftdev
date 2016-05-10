@@ -32,6 +32,11 @@ do {
         findFile(targetOption: "-name", targetName: value2)
     case .UpdateVersionStrings:
         try updateVersionStrings(configurationFileFullPath: value1, rootDirectoryPath: value2)
+    case .InstallDevelopmentSnapshot:
+        guard value1 == "-ds" || value1 == "--development-snapshot" else {
+            throw Error.UnsupportedOption
+        }
+        downloadAndInstallSnapshot(snapshotVersion: "swift-DEVELOPMENT-SNAPSHOT-\(value2)")
     case .Usage:
         usage()
     }
