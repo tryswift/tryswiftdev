@@ -62,9 +62,6 @@ Removing...
 
 <br />
 
-## ToDo
+## License
 
-- [ ] Error Handling
-- [ ] Tests
-
-etc.
+Licensed under the [MIT License](LICENSE).

@@ -37,15 +37,15 @@ You can decide the name as you like. (e.g. `tryswiftdevuvs`, `tryswiftdev.uvs`)
 ### A Specific Example (testTryswiftdev.uvs)
 
 ```
-./tryswiftdevtest/AfterUpdate/testFindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020160503a\"
-./tryswiftdevtest/AfterUpdate/testFindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./FindIt.swift, \"TOOLCHAINS=org.swift.[0-9]\{10\}a\", \"TOOLCHAINS=org.swift.3020160503a\"
+./FindIt.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterUpdate/testFindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./FindIt.md, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterUpdate/testFindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./FindItTests.swift, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 
-./tryswiftdevtest/AfterUpdate/.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode7.3
-./tryswiftdevtest/AfterUpdate/.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./.travis.yml, osx_image:\ xcode[0-9].[0-9], osx_image:\ xcode7.3
+./.travis.yml, swift-DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, swift-DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
 
 <br />
@@ -119,25 +119,25 @@ $ tryswiftdev -u <ConfigurationFileAbsolutePath> <WorkingDirectoryPath>
 ### CocoaPods Example
 
 ```
-./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
-./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.osx.deployment_target\ =\ \"[0-9]\{2\}.[0-9]\", s.osx.deployment_target\ =\ \"10.9\"
-./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.ios.deployment_target\ =\ \"[0-9].[0-9]\", s.ios.deployment_target =\ \"8.0\"
-./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.tvos.deployment_target\ =\ \"[0-9].[0-9]", s.tvos.deployment_target =\ \"9.0\"
-./tryswiftdevtest/AfterUpdate/testTryswiftdev.podspec, s.watchos.deployment_target\ =\ \"[0-9].[0-9]\", s.watchos.deployment_target\ =\ \"2.0\"
+./tryswiftdev.podspec, s.version\ \ \ \ \ =\ \"[0-9].[0-9].[0-9]", s.version\ \ \ \ \ =\ \"2.0.0\"
+./tryswiftdev.podspec, s.osx.deployment_target\ =\ \"[0-9]\{2\}.[0-9]\", s.osx.deployment_target\ =\ \"10.9\"
+./tryswiftdev.podspec, s.ios.deployment_target\ =\ \"[0-9].[0-9]\", s.ios.deployment_target =\ \"8.0\"
+./tryswiftdev.podspec, s.tvos.deployment_target\ =\ \"[0-9].[0-9]", s.tvos.deployment_target =\ \"9.0\"
+./tryswiftdev.podspec, s.watchos.deployment_target\ =\ \"[0-9].[0-9]\", s.watchos.deployment_target\ =\ \"2.0\"
 ```
 
 ### Carthage Example
 
 ```
-./tryswiftdevtest/AfterUpdate/Cartfile,  github\ \"ishkawa\/APIKit\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ishkawa\/APIKit\"\ \"2.0.0\"
-./tryswiftdevtest/AfterUpdate/Cartfile,  github\ \"ikesyo\/Himotoki\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ikesyo\/Himotoki\"\ \"2.0.0\"
-./tryswiftdevtest/AfterUpdate/Cartfile.private, github\ \"jspahrsummers\/xcconfigs\"\ \"[a-z0-9]\{7\}\", github\ \"jspahrsummers\/xcconfigs\"\ \"8ed0ba2\"
+./Cartfile,  github\ \"ishkawa\/APIKit\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ishkawa\/APIKit\"\ \"2.0.0\"
+./Cartfile,  github\ \"ikesyo\/Himotoki\"\ \"[0-9].[0-9].[0-9]\",  github\ \"ikesyo\/Himotoki\"\ \"2.0.0\"
+./Cartfile.private, github\ \"jspahrsummers\/xcconfigs\"\ \"[a-z0-9]\{7\}\", github\ \"jspahrsummers\/xcconfigs\"\ \"8ed0ba2\"
 ```
 
 ### swiftenv Example
 
 ```
-./tryswiftdevtest/AfterUpdate/.swift-version, DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, DEVELOPMENT-SNAPSHOT-2016-05-03-a
+./.swift-version, DEVELOPMENT-SNAPSHOT-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-a, DEVELOPMENT-SNAPSHOT-2016-05-03-a
 ```
 
 <br />
@@ -186,9 +186,6 @@ Recommented Swift 3.0-dev.
 
 <br />
 
-## ToDo
+## License
 
-- [ ] Error Handling
-- [ ] Tests
-
-etc.
+Licensed under the [MIT License](LICENSE).
