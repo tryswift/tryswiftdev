@@ -8,15 +8,19 @@
 
 _Is most of your documentation the same as your existing project's?_
 
-#### _- Make Easy for You to Create a README.md of New Project_
+#### _--> Make Easy for You to Create a README.md of New Project_
 
 ### [_Find It_](./Documentation/FindIt.md)
 
-#### _- Help You Out of "image not found"_
+#### _--> Help You Out of "image not found"_
 
 ### [_Version Strings Updater_](./Documentation/VersionStringsUpdater.md)
 
-#### _- Make Easy for You to Update Version Strings in Specified Files"_
+#### _--> Make Easy for You to Update Version Strings in Specified Files_
+
+### [_Development Snapshots Installer_](./Documentation/DevelopmentSnapshotsInstaller.md)
+
+#### _--> Make Easy for You to Install New Development Snapshots_
 
 <br />
 
@@ -40,11 +44,13 @@ Currently, support **OS X only**. 🙏
 
 ```
 -d [--duplicate-readme]    Duplicate an existing README.md.
-                            Do not overwrite an existing file.
+                             Do not overwrite an existing file.
 -r [--replace-readme]      Replace strings in a README.md
-                            located in the current directory.
+                             located in the current directory.
 -f [--find-it]             Search for specified file.
 -u [--update-version]      Update version strings in specified files. ✨
+-i [--install-snapshot]    Download and install Development Snapshots
+                             from Swift.org.
 -h [--help]                Display available options.
 ```
 
@@ -58,7 +64,11 @@ Please see [_**Find It**_](./Documentation/FindIt.md).
 
 ### _Version Strings Updater_
 
-Please see [_**Find It**_](./Documentation/VersionStringsUpdater.md).
+Please see [_**Version Strings Updater**_](./Documentation/VersionStringsUpdater.md).
+
+### _Development Snapshots Installer_
+
+Please see [_**Development Snapshots Installer**_](./Documentation/DevelopmentSnapshotsInstaller.md).
 
 <br />
 
