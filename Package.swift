@@ -7,7 +7,7 @@ let package = Package(
     ],
     dependencies: [
         .Package(url: "https://github.com/JPMartha/FounDarwin.git",
-                 versions: Version(0, 0, 0)..<Version(1, 0, 0))
+                 versions: Version(0, 0, 0)..<Version(0, 0, 2))
     ],
     exclude: ["Documentation", "testTryswiftdev"]
 )
