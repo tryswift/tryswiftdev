@@ -22,7 +22,7 @@ _Is most of your documentation the same as your existing project's?_
 
 #### _--> Make Easy for You to Install New Development Snapshots_
 
-### [_try! Swift 3.0_](./Documentation/TrySwift3.md)
+### [_try! Swift 3.0_](./Documentation/TrySwift3.md) (Another Shell Script)
 
 #### _--> Make Easy for You to Set Environment Variables Swift 3.0_
 
