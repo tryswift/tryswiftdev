@@ -22,6 +22,10 @@ _Is most of your documentation the same as your existing project's?_
 
 #### _--> Make Easy for You to Install New Development Snapshots_
 
+### [_try! Swift 3.0_](./Documentation/TrySwift3.md)
+
+#### _--> Make Easy for You to Set Environment Variables Swift 3.0_
+
 <br />
 
 <img src="./Documentation/Images/tryswiftdev.png">
