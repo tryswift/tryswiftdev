@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+echo
+echo "Before the change:"
+echo
+xcrun --find swift
+swift --version
+echo
+
+if [[ $PATH =~ /Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:* ]]
+then
+	echo "You have already set the PATH."
+else
+	export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$PATH
+	echo "PATH="$PATH
+fi
+
+if [[ $TOOLCHAINS = swift ]]
+then
+	echo "You have already set the TOOLCHAINS."
+else
+	export TOOLCHAINS=swift
+	echo "TOOLCHAINS="$TOOLCHAINS
+fi
+
+if [[ $SWIFT_EXEC = swift ]]
+then
+	echo "You have already set the SWIFT_EXEC."
+else
+	export SWIFT_EXEC=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swiftc
+	echo "SWIFT_EXEC="$SWIFT_EXEC
+fi
+
+echo
+echo "After the change:"
+echo
+xcrun --find swift
+swift --version
+echo
